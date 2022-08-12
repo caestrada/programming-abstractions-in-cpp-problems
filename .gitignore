@@ -1,0 +1,5 @@
+books/
+*.dSYM/
+bin/
+
+**/.DS_Store
