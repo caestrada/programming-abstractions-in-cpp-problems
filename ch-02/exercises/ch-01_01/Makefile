@@ -1,8 +1,8 @@
 # Makefile for Exercise01
 #****************************************************************
 
-PROGRAM = Exercise01
-OBJECTS = Exercise01.o
+PROGRAM = problem
+OBJECTS = problem.o
 
 ROOTPATH = ../..
 CPPOPTIONS = -I$(ROOTPATH)/include -fvisibility-inlines-hidden
@@ -18,11 +18,11 @@ all: $(PROGRAM) spl.jar
 spl.jar:
 	@ln -s $(ROOTPATH)/java/spl.jar
 
-Exercise01: $(OBJECTS)
+problem: $(OBJECTS)
 	g++ -o $(PROGRAM) $(LDOPTIONS) $(OBJECTS) $(LIB)
 
-Exercise01.o: Exercise01.cpp Makefile
-	g++ -c $(CPPOPTIONS) Exercise01.cpp
+problem.o: problem.cpp Makefile
+	g++ -c $(CPPOPTIONS) problem.cpp
 
 
 # ***************************************************************
