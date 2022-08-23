@@ -1,8 +1,8 @@
-# Makefile for HelloWorld
+# Makefile for Exercise01
 #****************************************************************
 
-PROGRAM = HelloWorld
-OBJECTS = HelloWorld.o
+PROGRAM = Exercise01
+OBJECTS = Exercise01.o
 
 ROOTPATH = ../..
 CPPOPTIONS = -I$(ROOTPATH)/include -fvisibility-inlines-hidden
@@ -18,11 +18,11 @@ all: $(PROGRAM) spl.jar
 spl.jar:
 	@ln -s $(ROOTPATH)/java/spl.jar
 
-HelloWorld: $(OBJECTS)
+Exercise01: $(OBJECTS)
 	g++ -o $(PROGRAM) $(LDOPTIONS) $(OBJECTS) $(LIB)
 
-HelloWorld.o: HelloWorld.cpp Makefile
-	g++ -c $(CPPOPTIONS) HelloWorld.cpp
+Exercise01.o: Exercise01.cpp Makefile
+	g++ -c $(CPPOPTIONS) Exercise01.cpp
 
 
 # ***************************************************************
