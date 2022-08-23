@@ -21,7 +21,7 @@ spl.jar:
 HelloWorld: $(OBJECTS)
 	g++ -o $(PROGRAM) $(LDOPTIONS) $(OBJECTS) $(LIB)
 
-HelloWorld.o: HelloWorld.cpp Makefile StanfordCPPLib/libStanfordCPPLib.a
+HelloWorld.o: HelloWorld.cpp Makefile
 	g++ -c $(CPPOPTIONS) HelloWorld.cpp
 
 
