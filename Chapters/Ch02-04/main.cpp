@@ -17,35 +17,20 @@ int roundToNearestInt(double x);
 
 int main()
 {
-//    double temp = getReal("Enter a tempereture: ");
-//    cout << "Temp:  " << temp << endl;
-//    double windSpeed = getReal("Enter a wind speed: ");
-//    cout << "Wind speed: " << windSpeed << endl;
-//    double wind = windChill(temp, windSpeed);
-//    cout << "Wind chill: " << wind << endl;
-
     cout << "     ";
     for (int t = 40; t >= -45; t -= 5) {
         cout << setw(5) << right << t;
     }
-    cout << endl << "     +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+" << endl;
+    cout << endl << "     +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+-----+" << endl;
     for (int v = 5; v <= 60; v += 5) {
-        cout << setw(4) << v << "|";
+        cout << setw(4) << v << " |";
         for (int t = 40; t >= -45; t -= 5) {
             cout << setw(5) << right << windChill((double) t, (double) v);
         }
         cout << "|" << endl;
     }
-    cout << "     +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+" << endl;
+    cout << "     +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+-----+" << endl;
 
-    for (int t = 40; t >= -45; t -= 5) {
-        for (int v = 5; v <= 60; v += 5) {
-//             cout << t << " " << v << endl;
-//            double wind = windChill((double) t, (double) v);
-//            cout << "Wind: " << wind << endl;
-//            cout << setw(10) << v << setw(10) << t << setw(10) <<windChill((double) t, (double) v) << setfill('-') << endl;
-        }
-    }
     return 0;
 }
 
