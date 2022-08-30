@@ -13,7 +13,7 @@ bool isPerfect(int n);
 
 int main()
 {
-    for (int i = 1; i < 1000000; i++) {
+    for (int i = 1; i < 10000; i++) {
         if (isPerfect(i)) {
             cout << "Found a perfect number: " << i << endl;
         }
